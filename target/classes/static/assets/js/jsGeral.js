@@ -1,6 +1,5 @@
 $(document).on('click', 'a[endpoint]', function (event) {
     var endpoint = $(this).attr('endpoint');
-    alert(endpoint);
     $("#content").load("/"+endpoint);
 });
 
