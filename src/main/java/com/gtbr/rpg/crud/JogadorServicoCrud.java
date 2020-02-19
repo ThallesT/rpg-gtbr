@@ -37,4 +37,8 @@ public class JogadorServicoCrud {
 
         return jogadorRepository.save(jogador);
     }
+
+    public Jogador getJogadorById(Long idUsuario) {
+        return jogadorRepository.findByIdJogador(idUsuario);
+    }
 }

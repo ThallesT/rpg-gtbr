@@ -8,4 +8,5 @@ public interface JogadorRepository extends CrudRepository<Jogador, Long> {
 
     Jogador findJogadorByNome(String nome);
 
+    Jogador findByIdJogador(Long idJogador);
 }
