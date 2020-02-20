@@ -14,6 +14,9 @@ public class Item {
     @Column(name = "imagem_do_item")
     private Byte[] imagemItem;
 
+    @Column(name = "level")
+    private Long level;
+
     @Column(name = "nome")
     private String nome;
 
@@ -50,5 +53,13 @@ public class Item {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public Long getLevel() {
+        return level;
+    }
+
+    public void setLevel(Long level) {
+        this.level = level;
     }
 }

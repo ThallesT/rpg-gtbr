@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface MesaRepository extends CrudRepository<Mesa, Long> {
 
+    Mesa findMesaByInviteCode(String inviteCode);
 
 }

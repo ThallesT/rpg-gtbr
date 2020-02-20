@@ -6,14 +6,9 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-3 order-lg-2">
                         <div class="card-profile-image">
-                            <a href="#">
+                            <a data-toggle="modal" data-target="#modalUpload">
                                 <img alt="Image placeholder" class="rounded-circle" th:if="${jogadorDTO.jogador.fotoJogador != null}" th:src="${'data:image/png;base64,'+jogadorDTO.fotoDePerfil}">
-                                <div th:if="${jogadorDTO.jogador.fotoJogador == null}" class="mx-auto">
-                                    <button type="button" data-toggle="modal" data-target="#modalUpload" class="btn btn-secondary"><i class="ni ni-camera-compact"></i>&nbsp;Alterar foto</button>
-
-                                </div>
-
-                            </a>
+                                <img th:if="${jogadorDTO.jogador.fotoJogador == null}" class="rounded-circle" src="/assets/img/user-profile-default.png">                            </a>
                         </div>
                     </div>
                 </div>
@@ -99,7 +94,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Altere sua foto de perfil</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>

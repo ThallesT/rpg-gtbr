@@ -11,8 +11,17 @@ public class Mesa {
     @Column(name = "id_mesa")
     private Long idMesa;
 
+    @Column(name = "introducao", length = 1000)
+    private String introducao;
+
+    @Column(name = "nome")
+    private String nome;
+
     @Column(name = "invite_code")
     private String inviteCode;
+
+    @Column(name = "sistema")
+    private String sistema;
 
     @Column(name = "id_jogador_mestre")
     private Long idMestre;
@@ -52,5 +61,29 @@ public class Mesa {
 
     public void setIdMestre(Long idMestre) {
         this.idMestre = idMestre;
+    }
+
+    public String getIntroducao() {
+        return introducao;
+    }
+
+    public void setIntroducao(String introducao) {
+        this.introducao = introducao;
+    }
+
+    public void setSistema(String sistema) {
+        this.sistema = sistema;
+    }
+
+    public String getSistema() {
+        return sistema;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getNome() {
+        return nome;
     }
 }

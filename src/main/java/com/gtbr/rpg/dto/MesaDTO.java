@@ -9,7 +9,7 @@ public class MesaDTO {
 
     private Mesa mesa;
 
-    private List<Jogador> listaJogador;
+    private List<JogadorDTO> listaJogadorDTO;
 
     public Mesa getMesa() {
         return mesa;
@@ -19,11 +19,11 @@ public class MesaDTO {
         this.mesa = mesa;
     }
 
-    public List<Jogador> getListaJogador() {
-        return listaJogador;
+    public List<JogadorDTO> getListaJogador() {
+        return listaJogadorDTO;
     }
 
-    public void setListaJogador(List<Jogador> listaJogador) {
-        this.listaJogador = listaJogador;
+    public void setListaJogador(List<JogadorDTO> listaJogadorDTO) {
+        this.listaJogadorDTO = listaJogadorDTO;
     }
 }

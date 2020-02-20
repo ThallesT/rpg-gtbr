@@ -1,9 +1,12 @@
 package com.gtbr.rpg.crud;
 
 import com.gtbr.rpg.crud.repository.MesaRepository;
+import com.gtbr.rpg.dto.JogadorDTO;
 import com.gtbr.rpg.dto.MesaDTO;
 import com.gtbr.rpg.entity.Jogador;
 import com.gtbr.rpg.entity.Mesa;
+import com.gtbr.rpg.entity.MesaJogador;
+import com.gtbr.rpg.service.GeneralServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,28 +21,81 @@ public class MesaServicoCrud {
 
     @Autowired
     private MesaRepository mesaRepository;
+    @Autowired
+    private MesaJogadorServicoCrud mesaJogadorServicoCrud;
+    @Autowired
+    private JogadorServicoCrud jogadorServicoCrud;
     @PersistenceContext
     private EntityManager entityManager;
 
 
-    public List<Mesa> getListaMesasByUsuario(Long idJogador) {
-        return (List<Mesa>) entityManager.createQuery("SELECT m FROM Mesa m join MesaJogador mj on mj.idJogador = :idJogador")
-                .setParameter("idJogador", idJogador).getResultList();
-
-    }
 
     public List<MesaDTO> getListaMesaDTO(Long idJogador){
         List<MesaDTO> listaMesaDTO = new ArrayList<>();
-        List<Mesa> listaMesa = getListaMesasByUsuario(idJogador);
-        listaMesa.forEach(mesa -> {
+        List<MesaJogador> listaMesajogador = mesaJogadorServicoCrud.getListaMesaJogadorByIdJogador(idJogador);
+        listaMesajogador.forEach(mesaJogador -> {
             MesaDTO mesaDTO = new MesaDTO();
-            mesaDTO.setMesa(mesa);
+            List<JogadorDTO> listaJogadorDTO = new ArrayList<>();
+            mesaDTO.setMesa(mesaJogador.getMesa());
             List<Jogador> listaJogador = (List<Jogador>) entityManager.createQuery("select j from Jogador j " +
                     "join MesaJogador mj on j.idJogador = mj.idJogador where mj.idMesa = :idMesa")
-                    .setParameter("idMesa", mesa.getIdMesa()).getResultList();
-            mesaDTO.setListaJogador(listaJogador);
+                    .setParameter("idMesa", mesaJogador.getIdMesa()).getResultList();
+
+            listaJogador.forEach(jogador -> {
+                listaJogadorDTO.add(jogadorServicoCrud.getJogadorDTO(jogador.getIdJogador()));
+            });
+
+            mesaDTO.setListaJogador(listaJogadorDTO);
             listaMesaDTO.add(mesaDTO);
         });
         return listaMesaDTO;
     }
+
+    public Mesa insereMesa(String nome, String sistema, String introducao, Long idJogador) {
+        Mesa mesa = new Mesa();
+        mesa.setIdMestre(idJogador);
+        mesa.setIntroducao(introducao);
+        mesa.setInviteCode(geraInviteCode());
+        mesa.setSistema(sistema);
+        mesa.setNome(nome);
+
+        Mesa mesaCriada = mesaRepository.save(mesa);
+        mesaJogadorServicoCrud.insereMesaJogador(mesaCriada.getIdMesa(), idJogador);
+        return mesaCriada;
+    }
+
+    public Mesa getMesaByInviteCode(String token) {
+        return mesaRepository.findMesaByInviteCode(token);
+    }
+
+    public String geraInviteCode(){
+        boolean verificador = false;
+        String token;
+        do {
+            int n = 30;
+            String AlphaNumericString = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    + "0123456789"
+                    + "abcdefghijklmnopqrstuvxyz";
+
+            StringBuilder sb = new StringBuilder(n);
+
+            for (int i = 0; i < n; i++) {
+                int index
+                        = (int) (AlphaNumericString.length()
+                        * Math.random());
+                sb.append(AlphaNumericString
+                        .charAt(index));
+            }
+            token = sb.toString();
+            Mesa mesa = getMesaByInviteCode(token);
+            if(mesa == null){
+                verificador = true;
+            }
+
+        }while (verificador == false);
+
+        return token;
+    }
+
+
 }
