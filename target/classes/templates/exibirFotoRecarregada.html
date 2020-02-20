@@ -1,0 +1,9 @@
+
+<div class="mb-5 text-center">
+    <img id="fotoCroppiedId" class="centralizarImg" th:src="${fotoDePerfil}">
+</div>
+
+<script>
+    var img = $('#fotoCroppiedId').attr('src');
+    $('#inputDaFotoForm').attr("value", img);
+</script>

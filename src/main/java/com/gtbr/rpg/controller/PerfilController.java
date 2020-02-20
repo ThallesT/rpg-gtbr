@@ -1,6 +1,7 @@
 package com.gtbr.rpg.controller;
 
 import com.gtbr.rpg.crud.JogadorServicoCrud;
+import com.gtbr.rpg.dto.JogadorDTO;
 import com.gtbr.rpg.entity.Jogador;
 import com.gtbr.rpg.service.GeneralServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,9 +27,23 @@ public class PerfilController {
     @RequestMapping("/meu-perfil")
     public String mostraPerfil(HttpServletRequest request, Model model){
         if(request.getSession().getAttribute("usuarioLogado") != null) {
-            Jogador jogador = jogadorServicoCrud.getJogadorById((Long) request.getSession().getAttribute("usuarioLogado"));
-            model.addAttribute("jogador", jogador);
+            JogadorDTO jogadorDTO = jogadorServicoCrud.getJogadorDTO((Long) request.getSession().getAttribute("usuarioLogado"));
+            model.addAttribute("jogadorDTO", jogadorDTO);
             return "perfil/perfil-jogador.html";
+        }
+
+
+        return "redirect:/";
+    }
+
+    @RequestMapping("/registra-foto")
+    public String registraFoto(HttpServletRequest request, @RequestParam("foto")String foto){
+        if(request.getSession().getAttribute("usuarioLogado") != null) {
+            Jogador jogador = jogadorServicoCrud.getJogadorById((Long) request.getSession().getAttribute("usuarioLogado"));
+            jogadorServicoCrud.alteraFoto(jogador.getIdJogador(), GeneralServices.codificaImagem(foto));
+
+
+            return "redirect:/";
         }
 
 
@@ -42,4 +57,15 @@ public class PerfilController {
         model.addAttribute("baseImg", baseImg);
         return "exibindoFoto.html";
     }
+
+    @PostMapping("/teste-foto-crop")
+    public String testeFotoCrop(@RequestParam("croppieImg") String croppieImg, Model model) throws Exception {
+
+
+
+        model.addAttribute("fotoDePerfil", croppieImg);
+        return "exibirFotoRecarregada.html";
+    }
+
+
 }

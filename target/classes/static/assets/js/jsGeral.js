@@ -121,12 +121,6 @@ function ajaxBuscaFoto(idUsuario) {
     }
 
 
-    $('#aplicarEviarImg').on('click', function (){
-        var img = $('#fotoCroppiedId').attr('src');
-        $('#inputDaFotoForm').attr("value", img);
-    });
-
-
     $(document).on('submit', '.form-ajax', function (event) {
         var form = event.target;
         ajaxSubmitForm(form);
