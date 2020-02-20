@@ -1,96 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="PostgreSQL - rpg-gtbr@localhost">
-  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.15">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.16">
     <root id="1">
       <ServerVersion>10.7</ServerVersion>
     </root>
     <database id="2" parent="1" name="aek">
       <ObjectId>16393</ObjectId>
-      <StateNumber>557</StateNumber>
       <Owner>postgres</Owner>
     </database>
     <database id="3" parent="1" name="postgres">
       <ObjectId>12980</ObjectId>
       <Comment>default administrative connection database</Comment>
-      <StateNumber>554</StateNumber>
       <Owner>postgres</Owner>
     </database>
     <database id="4" parent="1" name="restau">
       <ObjectId>16471</ObjectId>
-      <StateNumber>561</StateNumber>
       <Owner>restau123</Owner>
     </database>
     <database id="5" parent="1" name="restauTeste">
       <ObjectId>33888</ObjectId>
-      <StateNumber>8599</StateNumber>
       <Owner>restau123</Owner>
     </database>
     <database id="6" parent="1" name="restau_teste">
       <ObjectId>33402</ObjectId>
-      <StateNumber>8055</StateNumber>
       <Owner>restau123</Owner>
     </database>
     <database id="7" parent="1" name="rpg-gtbr">
       <ObjectId>50852</ObjectId>
-      <StateNumber>21032</StateNumber>
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>21062</IntrospectionStateNumber>
       <Current>1</Current>
-      <Visible>1</Visible>
     </database>
     <role id="8" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="9" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="10" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="11" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="12" parent="1" name="pg_stat_scan_tables">
       <ObjectId>3377</ObjectId>
-      <Inherit>1</Inherit>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="13" parent="1" name="postgres">
       <ObjectId>10</ObjectId>
       <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
       <Replication>1</Replication>
       <BypassRls>1</BypassRls>
     </role>
     <role id="14" parent="1" name="restau123">
       <ObjectId>16470</ObjectId>
       <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <role id="15" parent="1" name="restau1333">
       <ObjectId>42659</ObjectId>
       <SuperRole>1</SuperRole>
-      <Inherit>1</Inherit>
       <CreateRole>1</CreateRole>
       <CreateDb>1</CreateDb>
       <CanLogin>1</CanLogin>
-      <ConnectionLimit>-1</ConnectionLimit>
     </role>
     <schema id="16" parent="7" name="information_schema">
       <ObjectId>12689</ObjectId>
@@ -126,7 +103,6 @@
       <Owner>postgres</Owner>
       <IntrospectionStateNumber>21063</IntrospectionStateNumber>
       <Current>1</Current>
-      <Visible>1</Visible>
     </schema>
     <access-method id="22" parent="7" name="btree">
       <ObjectId>403</ObjectId>

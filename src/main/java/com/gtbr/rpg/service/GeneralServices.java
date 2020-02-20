@@ -1,7 +1,10 @@
 package com.gtbr.rpg.service;
 
+import org.apache.tomcat.util.codec.binary.Base64;
 import org.springframework.stereotype.Component;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -34,6 +37,28 @@ public class GeneralServices {
             return false;
         }
     }
+
+    public static String decodificaImagem(MultipartFile file) throws IOException {
+        byte[] img = file.getBytes();
+        String stringFoto = Base64.encodeBase64String(img);
+
+        return stringFoto;
+    }
+
+    public static String decodificaImagem(byte[] byteImg){
+
+        String stringFoto = Base64.encodeBase64String(byteImg);
+
+        return stringFoto;
+    }
+
+    public static byte[] codificaImagem(String string){
+        String str = string.substring(string.indexOf(",")+1);
+        str.trim();
+        byte[] bytes = Base64.decodeBase64(str);
+        return bytes;
+    }
+
 
 
 

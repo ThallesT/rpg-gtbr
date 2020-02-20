@@ -56,4 +56,12 @@ public class Jogador {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public Byte[] getFotoJogador() {
+        return fotoJogador;
+    }
+
+    public void setFotoJogador(Byte[] fotoJogador) {
+        this.fotoJogador = fotoJogador;
+    }
 }

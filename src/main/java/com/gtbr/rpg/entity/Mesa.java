@@ -1,7 +1,6 @@
 package com.gtbr.rpg.entity;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name = "mesa", schema = "public")
@@ -11,6 +10,9 @@ public class Mesa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_mesa")
     private Long idMesa;
+
+    @Column(name = "invite_code")
+    private String inviteCode;
 
     @Column(name = "id_jogador_mestre")
     private Long idMestre;
@@ -36,4 +38,19 @@ public class Mesa {
         this.mestre = mestre;
     }
 
+    public String getInviteCode() {
+        return inviteCode;
+    }
+
+    public void setInviteCode(String inviteCode) {
+        this.inviteCode = inviteCode;
+    }
+
+    public Long getIdMestre() {
+        return idMestre;
+    }
+
+    public void setIdMestre(Long idMestre) {
+        this.idMestre = idMestre;
+    }
 }

@@ -1,0 +1,32 @@
+
+        <div class="cr-boundary mb-5 mx-auto" aria-dropeffect="none" style="width: 300px; height: 300px;">
+            <img id="imgTag" th:src="${'data:image/png;base64,'+baseImg}" class="cr-image" style="opacity: 1; transform: translate3d(-84.595px, -284.08px, 0px) scale(0.3197); transform-origin: 234.595px 434.08px 0px;" aria-grabbed="false">
+        </div>
+
+
+
+    <div id="teste" class="row">
+        <form class="user form-ajax mx-auto mb-4" method="post" data-target="content-modal-image"  action="/teste-foto-crop">
+            <input type="text" name="croppieImg" id="inputFoto" hidden>
+            <button id="crop" class="btn btn-block btn-primary" type="submit">Recortar</button>
+        </form>
+    </div>
+
+<script>
+
+    $('#imgTag').croppie();
+
+    $('#crop').on('click', function(){
+        var obj = $('#imgTag');
+
+        obj.croppie('result', 'base64').then(function(base64) {
+            var input = $('#inputFoto');
+
+            input.attr("value", base64);
+
+        });
+    });
+
+
+
+</script>

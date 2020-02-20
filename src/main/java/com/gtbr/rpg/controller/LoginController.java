@@ -27,6 +27,7 @@ public class LoginController {
     @RequestMapping("/logar")
     public String loga(HttpServletRequest request, @RequestParam("email")String email, @RequestParam("senha")String senha){
         Jogador jogador = jogadorServicoCrud.getJogadorByEmail(email);
+            if(jogador == null) return "redirect:/registro";
             if(GeneralServices.validaConfirmaSenha(GeneralServices.gerarHash(senha), jogador.getSenha())){
             request.getSession().setAttribute("usuarioLogado", jogador.getIdJogador());
             return "redirect:/";
