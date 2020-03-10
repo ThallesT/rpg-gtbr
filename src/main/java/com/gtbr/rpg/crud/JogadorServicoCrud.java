@@ -58,7 +58,7 @@ public class JogadorServicoCrud {
         Jogador jogador = getJogadorById(idJogador);
         JogadorDTO jogadorDTO = new JogadorDTO();
         jogadorDTO.setJogador(jogador);
-        jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
+        if( jogador.getFotoJogador() != null) jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
 
         return jogadorDTO;
     }

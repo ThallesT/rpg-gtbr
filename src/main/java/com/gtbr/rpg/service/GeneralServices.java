@@ -1,20 +1,13 @@
 package com.gtbr.rpg.service;
 
-import com.fasterxml.jackson.core.util.ByteArrayBuilder;
-import com.gtbr.rpg.crud.MesaServicoCrud;
-import com.gtbr.rpg.entity.Mesa;
-import javassist.bytecode.ByteArray;
 import org.apache.tomcat.util.codec.binary.Base64;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
-import org.thymeleaf.util.ArrayUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
 
 import static java.util.Arrays.setAll;
 

@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60fa67c2-f642-4708-b3a2-a04f53625aad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaJogadorServicoCrud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/SkillServicoCrud.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaJogadorRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/SkillRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/assets/img/user-profile-default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mesas/criar-mesa.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/SkillsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/SkillsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Mesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Mesa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Skill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Skill.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/service/GeneralServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/service/GeneralServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/perfil/perfil-jogador.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/perfil/perfil-jogador.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mesas/menu-mesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mesas/menu-mesas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/perfil/perfil-jogador.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/perfil/perfil-jogador.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -139,15 +120,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaRepository.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -168,8 +140,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+            <state relative-caret-position="105">
+              <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="56" column="52" lean-forward="true" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+              <folding>
+                <element signature="e#2049#2050#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -212,7 +196,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/exibirFotoRecarregada.html" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/JogadorDTO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/IndexController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/PerfilController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/perfil/perfil-jogador.html" />
@@ -223,7 +206,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/SkillServicoCrud.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/SkillsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Mesa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/service/GeneralServices.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" />
@@ -232,6 +214,8 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/56153b22-54ab-4f9f-bcfa-9d2ae40cba61/console.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaJogadorServicoCrud.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/service/GeneralServices.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" />
       </list>
     </option>
@@ -451,12 +435,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582077634132</updated>
-      <workItem from="1582077635848" duration="27374000" />
+      <workItem from="1582077635848" duration="30080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27374000" />
+    <option name="totallyTimeSpent" value="30080000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="53" y="25" width="1313" height="743" extended-state="6" />
@@ -592,13 +576,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="62" column="26" selection-start-line="62" selection-start-column="26" selection-end-line="62" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/exibirFotoRecarregada.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -688,16 +665,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
           <caret line="82" column="41" lean-forward="true" selection-end-line="139" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/service/GeneralServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -821,10 +788,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/service/GeneralServices.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="56" column="52" lean-forward="true" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
+          <folding>
+            <element signature="e#2049#2050#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="97" selection-start-line="18" selection-start-column="97" selection-end-line="18" selection-end-column="97" />
+        <state relative-caret-position="105">
+          <caret line="7" column="95" selection-start-line="7" selection-start-column="95" selection-end-line="7" selection-end-column="95" />
         </state>
       </provider>
     </entry>

@@ -15,6 +15,11 @@
                     </p>
                     <hr>
                     <p class="mt-3 mb-0 text-muted text-sm">
+                        <span class="text-black mr-2">Introdução ao universo:</span>
+                        <span class="h5 font-weight-bold mb-0" th:text="${mesaDTO.mesa.introducao}"></span>
+                    </p>
+                    <hr>
+                    <p class="mt-3 mb-0 text-muted text-sm">
                         <span class="text-black mr-2">Invite code:</span>
                         <span class="h5 font-weight-bold mb-0" th:text="${mesaDTO.mesa.inviteCode}"></span>
                     </p>
@@ -27,30 +32,6 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="card-title text-uppercase mb-0">Mais mesas?</h5>
-                            <span class="text-muted mr-2">Crie uma</span>
-                        </div>
-                        <a endpoint="mesa/criar" class="btn btn-success"><i class="ni ni-fat-add"></i></a>
-                    </div>
-                    <span>
-                        Ou
-                    </span>
-                    <div>
-                        <span class="text-muted">junte-se a uma</span>
-                        <input class="form-control" type="text" placeholder="Digite o invite code">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div th:if="${listaMesaDTO.size() == 0}">
-    <div class="row">
-        <div class="col-xl-4 col-lg-6">
-            <div class="card card-stats mb-4 mb-xl-0">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <h5 class="card-title text-uppercase mb-0">Sem mesas registradas</h5>
                             <span class="text-muted mr-2">Crie uma</span>
                         </div>
                         <a endpoint="mesa/criar" class="btn btn-success"><i class="ni ni-fat-add"></i></a>
