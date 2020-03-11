@@ -2,6 +2,7 @@ package com.gtbr.rpg.crud;
 
 import com.gtbr.rpg.crud.repository.JogadorRepository;
 import com.gtbr.rpg.dto.JogadorDTO;
+import com.gtbr.rpg.dto.composite.DtoComposite;
 import com.gtbr.rpg.entity.Jogador;
 import com.gtbr.rpg.service.GeneralServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,8 @@ import org.springframework.stereotype.Component;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class JogadorServicoCrud {
@@ -56,8 +59,7 @@ public class JogadorServicoCrud {
 
     public JogadorDTO getJogadorDTO(Long idJogador){
         Jogador jogador = getJogadorById(idJogador);
-        JogadorDTO jogadorDTO = new JogadorDTO();
-        jogadorDTO.setJogador(jogador);
+        JogadorDTO jogadorDTO = new DtoComposite<JogadorDTO, Jogador>().compose(jogador, JogadorDTO.class);
         if( jogador.getFotoJogador() != null) jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
 
         return jogadorDTO;
@@ -65,5 +67,23 @@ public class JogadorServicoCrud {
 
     public Jogador getJogadorById(Long idUsuario) {
         return jogadorRepository.findByIdJogador(idUsuario);
+    }
+
+    public List<Jogador> getListaJogadorByIdMesa(Long idMesa) {
+        return  (List<Jogador>) entityManager.createQuery("select j from Jogador j " +
+                "join MesaJogador mj on j.idJogador = mj.idJogador where mj.idMesa = :idMesa")
+                .setParameter("idMesa", idMesa).getResultList();
+    }
+
+    public List<JogadorDTO> getListaJogadorDTOByIdMesa(Long idMesa) {
+        List<JogadorDTO> listaJogadorDTO = new ArrayList<>();
+        List<Jogador> listaJogador = getListaJogadorByIdMesa(idMesa);
+        listaJogador.forEach(jogador -> {
+            JogadorDTO jogadorDTO = new DtoComposite<JogadorDTO, Jogador>().compose(jogador, JogadorDTO.class);
+            if( jogador.getFotoJogador() != null) jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
+
+            listaJogadorDTO.add(jogadorDTO);
+        });
+        return listaJogadorDTO;
     }
 }

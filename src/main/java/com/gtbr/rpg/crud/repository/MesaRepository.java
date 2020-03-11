@@ -9,4 +9,6 @@ public interface MesaRepository extends CrudRepository<Mesa, Long> {
 
     Mesa findMesaByInviteCode(String inviteCode);
 
+    Mesa findByIdMesa(Long idMesa);
+
 }

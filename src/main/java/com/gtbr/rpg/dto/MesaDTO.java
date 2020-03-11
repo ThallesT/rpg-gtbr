@@ -5,25 +5,19 @@ import com.gtbr.rpg.entity.Mesa;
 
 import java.util.List;
 
-public class MesaDTO {
+public class MesaDTO extends Mesa{
 
-    private Mesa mesa;
+
 
     private List<JogadorDTO> listaJogadorDTO;
 
-    public Mesa getMesa() {
-        return mesa;
-    }
 
-    public void setMesa(Mesa mesa) {
-        this.mesa = mesa;
-    }
-
-    public List<JogadorDTO> getListaJogador() {
+    public List<JogadorDTO> getListaJogadorDTO() {
         return listaJogadorDTO;
     }
 
-    public void setListaJogador(List<JogadorDTO> listaJogadorDTO) {
+    public void setListaJogadorDTO(List<JogadorDTO> listaJogadorDTO) {
         this.listaJogadorDTO = listaJogadorDTO;
     }
+
 }

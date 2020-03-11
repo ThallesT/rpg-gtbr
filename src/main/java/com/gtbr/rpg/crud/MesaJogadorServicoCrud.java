@@ -31,4 +31,12 @@ public class MesaJogadorServicoCrud {
 
         return mesaJogadorRepository.save(mesaJogador);
     }
+
+    public MesaJogador findMesaJogadorById(Long idMesa, Long idJogador) {
+        return (MesaJogador) entityManager.createQuery("select mj from MesaJogador mj where " +
+                "mj.idJogador = :idJogador and md.idMesa = :idMesa")
+                .setParameter("idJogador", idJogador)
+                .setParameter("idMesa", idMesa);
+
+    }
 }
