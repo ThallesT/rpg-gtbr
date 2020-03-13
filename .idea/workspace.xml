@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ac604b9-f49b-4411-bb9a-10f6353e18a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mesas/tela-principal-mesa.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/gtbr/rpg/controller/MesasControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/config/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/interceptor/WebInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaJogadorServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaJogadorServicoCrud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/JogadorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/JogadorDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/SecaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/SecaoDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/composite/DtoComposite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/mesas/menu-mesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mesas/menu-mesas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/IndexController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,17 +75,17 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="feature/ficha-personalizavel" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -108,6 +97,7 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="ProjectId" id="1Z3UZJRUqf0JcKlSASV1m7CTSHF" />
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -193,8 +183,8 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.RpgApplication" />
       <item itemvalue="JUnit.MesasControllerTest.acessaMesa" />
+      <item itemvalue="Spring Boot.RpgApplication" />
     </list>
     <recent_temporary>
       <list>
@@ -228,12 +218,13 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="60fa67c2-f642-4708-b3a2-a04f53625aad" name="Default Changelist" comment="" />
+      <changelist id="7ac604b9-f49b-4411-bb9a-10f6353e18a2" name="Default Changelist" comment="" />
       <created>1582077634132</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582077634132</updated>
       <workItem from="1582077635848" duration="30080000" />
+      <workItem from="1584067325630" duration="1571000" />
     </task>
     <task id="LOCAL-00001" summary="configs">
       <created>1583885727698</created>
@@ -270,7 +261,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -280,17 +273,6 @@
     <MESSAGE value="configs" />
     <MESSAGE value="Refactor das entidades" />
     <option name="LAST_COMMIT_MESSAGE" value="Refactor das entidades" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/LoginController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/rpg$MesasControllerTest_acessaMesa.ic" NAME="MesasControllerTest.acessaMesa Coverage Results" MODIFIED="1583974800942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

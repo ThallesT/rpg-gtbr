@@ -20,19 +20,8 @@ public class IndexController {
 
     @RequestMapping("/")
     public String index(HttpServletRequest request, Model model){
-        if(request.getSession().getAttribute("usuarioLogado") != null) {
-            JogadorDTO jogadorDTO = jogadorServicoCrud.getJogadorDTO((Long) request.getSession().getAttribute("usuarioLogado"));
-            model.addAttribute("jogadorDTO", jogadorDTO);
-            return "home.html";
-        }
-
-
-        return "login.html";
-    }
-
-    @RequestMapping("/teste")
-    public String paginaTeste(){
-
+        JogadorDTO jogadorDTO = jogadorServicoCrud.getJogadorDTO((Long) request.getSession().getAttribute("usuarioLogado"));
+        model.addAttribute("jogadorDTO", jogadorDTO);
         return "home.html";
     }
 
