@@ -7,51 +7,16 @@ import com.gtbr.rpg.entity.Skill;
 
 import java.util.List;
 
-public class FichaDTO {
+public class FichaDTO extends Ficha{
 
-    private Ficha ficha;
-    private List<Skill> listaSkill;
-    private List<Item> listaItem;
-    private List<Item> listaEquipamento;
-    private List<Idioma> listaIdioma;
+    private List<SecaoDTO> listaSkill;
 
-    public Ficha getFicha() {
-        return ficha;
-    }
 
-    public void setFicha(Ficha ficha) {
-        this.ficha = ficha;
-    }
-
-    public List<Skill> getListaSkill() {
+    public List<SecaoDTO> getListaSkill() {
         return listaSkill;
     }
 
-    public void setListaSkill(List<Skill> listaSkill) {
+    public void setListaSkill(List<SecaoDTO> listaSkill) {
         this.listaSkill = listaSkill;
-    }
-
-    public List<Item> getListaItem() {
-        return listaItem;
-    }
-
-    public void setListaItem(List<Item> listaItem) {
-        this.listaItem = listaItem;
-    }
-
-    public List<Item> getListaEquipamento() {
-        return listaEquipamento;
-    }
-
-    public void setListaEquipamento(List<Item> listaEquipamento) {
-        this.listaEquipamento = listaEquipamento;
-    }
-
-    public List<Idioma> getListaIdioma() {
-        return listaIdioma;
-    }
-
-    public void setListaIdioma(List<Idioma> listaIdioma) {
-        this.listaIdioma = listaIdioma;
     }
 }

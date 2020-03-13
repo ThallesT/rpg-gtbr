@@ -2,16 +2,16 @@ package com.gtbr.rpg.dto;
 
 import com.gtbr.rpg.entity.Jogador;
 
-public class JogadorDTO {
-    private Jogador jogador;
+public class JogadorDTO extends Jogador{
+
     private String fotoDePerfil;
 
-    public Jogador getJogador() {
-        return jogador;
-    }
-
-    public void setJogador(Jogador jogador) {
-        this.jogador = jogador;
+    public JogadorDTO(Jogador jogador){
+        super.setEmail(jogador.getEmail());
+        super.setNome(jogador.getNome());
+        super.setSenha(jogador.getSenha());
+        super.setIdJogador(jogador.getIdJogador());
+        super.setFotoJogador(jogador.getFotoJogador());
     }
 
     public String getFotoDePerfil() {

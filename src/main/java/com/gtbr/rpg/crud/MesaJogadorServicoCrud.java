@@ -5,13 +5,12 @@ import com.gtbr.rpg.entity.MesaJogador;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.List;
 
 @Component
-public class MesaJogadorServicoCrud {
+public class MesaJogadorServicoCrud{
 
     @Autowired
     private MesaJogadorRepository mesaJogadorRepository;
@@ -30,5 +29,13 @@ public class MesaJogadorServicoCrud {
         mesaJogador.setIdMesa(idMesa);
 
         return mesaJogadorRepository.save(mesaJogador);
+    }
+
+    public MesaJogador findMesaJogadorById(Long idMesa, Long idJogador) {
+        return (MesaJogador) entityManager.createQuery("select mj from MesaJogador mj where " +
+                "mj.idJogador = :idJogador and mj.idMesa = :idMesa")
+                .setParameter("idJogador", idJogador)
+                .setParameter("idMesa", idMesa).getResultList().get(0);
+
     }
 }

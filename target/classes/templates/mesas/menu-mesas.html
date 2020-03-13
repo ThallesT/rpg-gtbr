@@ -1,4 +1,4 @@
-<div >
+<div xmlns="http://www.w3.org/1999/html">
     <div class="row">
         <div th:each="mesaDTO : ${listaMesaDTO}" class="col-xl-4 col-lg-6">
             <div class="card card-stats mb-4 mb-xl-0">
@@ -6,23 +6,26 @@
                     <div class="row">
                         <div class="col">
                             <h5 class="card-title text-uppercase text-muted mb-0">Nome da mesa:</h5>
-                            <span class="h2 font-weight-bold mb-0" th:text="${mesaDTO.mesa.nome}"></span>
+                            <span class="h2 font-weight-bold mb-0" th:text="${mesaDTO.nome}"></span>
                         </div>
                     </div>
                     <p class="mt-3 mb-0 text-muted text-sm">
-                        <span class="text-black mr-2">Mestre:</span>
-                        <span class="h4 font-weight-bold mb-0" th:text="${mesaDTO.mesa.mestre.nome}"></span>
+                        <span class="text-black mr-2">No. de jogadores:</span>
+                        <span class="h4 font-weight-bold mb-0" th:text="${mesaDTO.listaJogadorDTO.size()}"></span>
                     </p>
                     <hr>
                     <p class="mt-3 mb-0 text-muted text-sm">
                         <span class="text-black mr-2">Introdução ao universo:</span>
-                        <span class="h5 font-weight-bold mb-0" th:text="${mesaDTO.mesa.introducao}"></span>
+                        <span class="h5 font-weight-bold mb-0" th:text="${mesaDTO.introducao}"></span>
                     </p>
                     <hr>
                     <p class="mt-3 mb-0 text-muted text-sm">
                         <span class="text-black mr-2">Invite code:</span>
-                        <span class="h5 font-weight-bold mb-0" th:text="${mesaDTO.mesa.inviteCode}"></span>
+                        <span class="h5 font-weight-bold mb-0" th:text="${mesaDTO.inviteCode}"></span>
                     </p>
+                    <div class="text-center mt-3">
+                        <a th:endpoint="${'mesa/entrar/'+mesaDTO.idMesa}" class="btn btn-sm btn-success text-white">Entrar</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,14 +37,19 @@
                             <h5 class="card-title text-uppercase mb-0">Mais mesas?</h5>
                             <span class="text-muted mr-2">Crie uma</span>
                         </div>
-                        <a endpoint="mesa/criar" class="btn btn-success"><i class="ni ni-fat-add"></i></a>
+                        <a endpoint="mesa/criar" class="btn btn-success"><i class="text-white ni ni-fat-add"></i></a>
                     </div>
                     <span>
                         Ou
                     </span>
                     <div>
                         <span class="text-muted">junte-se a uma</span>
-                        <input class="form-control" type="text" placeholder="Digite o invite code">
+                        <form class="form-ajax" data-target="content" action="/mesa/convite">
+                            <input class="form-control" type="text" name="invite" placeholder="Digite o invite code">
+                            <div class="text-center mt-3">
+                                <button class="btn btn-sm btn-success">Entrar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

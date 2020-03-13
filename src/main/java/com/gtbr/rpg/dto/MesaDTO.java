@@ -1,29 +1,29 @@
 package com.gtbr.rpg.dto;
 
-import com.gtbr.rpg.entity.Jogador;
 import com.gtbr.rpg.entity.Mesa;
 
 import java.util.List;
 
-public class MesaDTO {
-
-    private Mesa mesa;
+public class MesaDTO extends Mesa{
 
     private List<JogadorDTO> listaJogadorDTO;
 
-    public Mesa getMesa() {
-        return mesa;
+    public MesaDTO(Mesa mesa){
+        super.setIdMestre(mesa.getIdMestre());
+        super.setIntroducao(mesa.getIntroducao());
+        super.setInviteCode(mesa.getInviteCode());
+        super.setNome(mesa.getNome());
+        super.setSistema(mesa.getSistema());
+        super.setIdMesa(mesa.getIdMesa());
+        super.setMestre(mesa.getMestre());
     }
 
-    public void setMesa(Mesa mesa) {
-        this.mesa = mesa;
-    }
-
-    public List<JogadorDTO> getListaJogador() {
+    public List<JogadorDTO> getListaJogadorDTO() {
         return listaJogadorDTO;
     }
 
-    public void setListaJogador(List<JogadorDTO> listaJogadorDTO) {
+    public void setListaJogadorDTO(List<JogadorDTO> listaJogadorDTO) {
         this.listaJogadorDTO = listaJogadorDTO;
     }
+
 }

@@ -1,0 +1,55 @@
+<div class="container-fluid mt--7">
+    <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+            <div class="card card-profile shadow">
+                <div class="row justify-content-center">
+                </div>
+                <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
+                    <h3 th:text="${'Jogadores: '+mesaDTO.listaJogadorDTO.size()}">
+                    </h3>
+                </div>
+                <div class="card-body pt-0 pt-md-4">
+                    <div class="text-center">
+                        <div th:each="jogadorDTO : ${mesaDTO.listaJogadorDTO}" class="col-lg-12 col-md-12 col-sm-12">
+                            <button type="button" class="btn-icon-clipboard" data-clipboard-text="active-40" title=""
+                                    data-original-title="Copy to clipboard">
+                                <div>
+                                    <span class="avatar avatar-sm rounded-circle">
+                                        <img alt="Image placeholder" th:if="${jogadorDTO.fotoJogador != null}"
+                                             th:src="${'data:image/png;base64,'+jogadorDTO.fotoDePerfil}">
+                                          <i th:if="${jogadorDTO.fotoJogador == null}" class="ni ni-single-02"></i>
+                                      </span>
+                                    <span class="h4" th:text="${jogadorDTO.nome}"></span>
+                                    <ion-icon th:if="${mesaDTO.mestre.idJogador == jogadorDTO.idJogador}" class="ml-4" name="ribbon-outline"></ion-icon>
+
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+            <div class="card bg-secondary shadow">
+                <div class="card-header bg-white border-0">
+                    <div class="row align-items-center">
+                        <div class="col-8">
+                            <h3 class="mb-0" th:text="${'Mesa: '+mesaDTO.nome}"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-header">
+                        <h3>Console</h3>
+                    </div>
+                    <div class="card-body">
+                        <span>Granmilk criou essa mesa!</span>
+                    </div>
+                    <div class="card-footer">
+                        <input type="text" class="input-group">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
