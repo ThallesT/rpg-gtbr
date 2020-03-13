@@ -3,22 +3,19 @@ package com.gtbr.rpg.crud;
 import com.gtbr.rpg.crud.repository.MesaRepository;
 import com.gtbr.rpg.dto.JogadorDTO;
 import com.gtbr.rpg.dto.MesaDTO;
-import com.gtbr.rpg.dto.composite.DtoComposite;
 import com.gtbr.rpg.entity.Jogador;
 import com.gtbr.rpg.entity.Mesa;
 import com.gtbr.rpg.entity.MesaJogador;
-import com.gtbr.rpg.service.GeneralServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class MesaServicoCrud {
+public class MesaServicoCrud{
 
     @Autowired
     private MesaRepository mesaRepository;
@@ -35,7 +32,7 @@ public class MesaServicoCrud {
         List<MesaDTO> listaMesaDTO = new ArrayList<>();
         List<MesaJogador> listaMesajogador = mesaJogadorServicoCrud.getListaMesaJogadorByIdJogador(idJogador);
         listaMesajogador.forEach(mesaJogador -> {
-            MesaDTO mesaDTO = new DtoComposite<MesaDTO, Mesa>().compose(mesaJogador.getMesa(), MesaDTO.class);
+            MesaDTO mesaDTO = new MesaDTO(mesaJogador.getMesa());
             List<JogadorDTO> listaJogadorDTO = new ArrayList<>();
             List<Jogador> listaJogador = jogadorServicoCrud.getListaJogadorByIdMesa(mesaDTO.getIdMesa());
 
@@ -111,10 +108,11 @@ public class MesaServicoCrud {
 
     public MesaDTO getMesaDTO(Long idMesa) {
         Mesa mesa = mesaRepository.findByIdMesa(idMesa);
-        MesaDTO mesaDTO = new DtoComposite<MesaDTO, Mesa>().compose(mesa, MesaDTO.class);
+        MesaDTO mesaDTO = new MesaDTO(mesa);
         List<JogadorDTO> listaJogadorDTO = jogadorServicoCrud.getListaJogadorDTOByIdMesa(idMesa);
         mesaDTO.setListaJogadorDTO(listaJogadorDTO);
 
         return mesaDTO;
     }
+
 }

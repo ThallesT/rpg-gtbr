@@ -2,34 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ac604b9-f49b-4411-bb9a-10f6353e18a2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/$PRODUCT_WORKSPACE_FILE$" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/SecaoDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/composite/DtoComposite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Campo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Secao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/enums/TipoCampoEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mesas/tela-principal-mesa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gtbr/rpg/controller/MesasControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/controller/MesasController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/JogadorServicoCrud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaJogadorServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaJogadorServicoCrud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/MesaServicoCrud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/crud/repository/MesaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/FichaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/FichaDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/JogadorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/JogadorDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/MesaDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Ficha.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/Ficha.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/FichaIdioma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/SecaoCampo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/FichaSkill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/entity/FichaSecao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/SecaoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/SecaoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtbr/rpg/dto/composite/DtoComposite.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mesas/menu-mesas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/perfil/perfil-jogador.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/perfil/perfil-jogador.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/mesas/menu-mesas.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/mesas/menu-mesas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/perfil/perfil-jogador.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/perfil/perfil-jogador.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,10 +85,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Enum" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -131,6 +119,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/assets/img" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -148,8 +138,14 @@
     <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.gtbr.rpg.controller" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/assets/img" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.gtbr.rpg.dto" />
@@ -170,7 +166,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.RpgApplication">
+    <configuration name="MesasControllerTest.acessaMesa" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpg" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gtbr.rpg.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gtbr.rpg.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.gtbr.rpg.controller.MesasControllerTest" />
+      <option name="METHOD_NAME" value="acessaMesa" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RpgApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="rpg" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.gtbr.rpg.RpgApplication" />
@@ -180,12 +192,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Spring Boot.RpgApplication" />
+      <item itemvalue="JUnit.MesasControllerTest.acessaMesa" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MesasControllerTest.acessaMesa" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="allServicesViewState">
       <serviceView>
+        <option name="contentProportion" value="0.11758119" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d2717d94" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d2717d94" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@586f17a8" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -210,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583885727698</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Refactor das entidades">
+      <created>1583936197160</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583936197160</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +278,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="configs" />
-    <option name="LAST_COMMIT_MESSAGE" value="configs" />
+    <MESSAGE value="Refactor das entidades" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor das entidades" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -251,6 +291,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/rpg$MesasControllerTest_acessaMesa.ic" NAME="MesasControllerTest.acessaMesa Coverage Results" MODIFIED="1583974800942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.gtbr.rpg.controller.*</FILTER>
+    </SUITE>
   </component>
   <component name="masterDetails">
     <states>

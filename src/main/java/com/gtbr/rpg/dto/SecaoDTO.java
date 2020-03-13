@@ -7,6 +7,7 @@ import java.util.List;
 
 public class SecaoDTO extends Secao {
 
+
     private List<Campo> listaCampo;
 
     public List<Campo> getListaCampo() {
@@ -16,4 +17,6 @@ public class SecaoDTO extends Secao {
     public void setListaCampo(List<Campo> listaCampo) {
         this.listaCampo = listaCampo;
     }
+
+
 }

@@ -2,7 +2,6 @@ package com.gtbr.rpg.crud;
 
 import com.gtbr.rpg.crud.repository.JogadorRepository;
 import com.gtbr.rpg.dto.JogadorDTO;
-import com.gtbr.rpg.dto.composite.DtoComposite;
 import com.gtbr.rpg.entity.Jogador;
 import com.gtbr.rpg.service.GeneralServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class JogadorServicoCrud {
+public class JogadorServicoCrud{
 
     @Autowired
     private JogadorRepository jogadorRepository;
@@ -59,7 +58,7 @@ public class JogadorServicoCrud {
 
     public JogadorDTO getJogadorDTO(Long idJogador){
         Jogador jogador = getJogadorById(idJogador);
-        JogadorDTO jogadorDTO = new DtoComposite<JogadorDTO, Jogador>().compose(jogador, JogadorDTO.class);
+        JogadorDTO jogadorDTO = new JogadorDTO(jogador);
         if( jogador.getFotoJogador() != null) jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
 
         return jogadorDTO;
@@ -79,11 +78,14 @@ public class JogadorServicoCrud {
         List<JogadorDTO> listaJogadorDTO = new ArrayList<>();
         List<Jogador> listaJogador = getListaJogadorByIdMesa(idMesa);
         listaJogador.forEach(jogador -> {
-            JogadorDTO jogadorDTO = new DtoComposite<JogadorDTO, Jogador>().compose(jogador, JogadorDTO.class);
-            if( jogador.getFotoJogador() != null) jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
+            JogadorDTO jogadorDTO = new JogadorDTO(jogador);
+            if(jogador.getFotoJogador() != null) jogadorDTO.setFotoDePerfil(GeneralServices.decodificaImagem(jogador.getFotoJogador()));
 
             listaJogadorDTO.add(jogadorDTO);
         });
         return listaJogadorDTO;
     }
+
+
+
 }

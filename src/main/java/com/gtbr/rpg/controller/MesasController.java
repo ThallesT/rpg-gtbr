@@ -50,7 +50,7 @@ public class MesasController {
     }
 
     @RequestMapping("/mesa/convite")
-    public String registraMesa(@RequestParam("invite")String invite, HttpServletRequest request){
+    public String cadastraJogadorNaMesaPorConvite(@RequestParam("invite")String invite, HttpServletRequest request){
         Jogador jogador = jogadorServicoCrud.getJogadorById((Long)request.getSession().getAttribute("usuarioLogado"));
         mesaServicoCrud.cadastroJogadorByInviteCode(invite, jogador.getIdJogador());
 
@@ -58,7 +58,7 @@ public class MesasController {
     }
 
     @RequestMapping("/mesa/entrar/{idMesa}")
-    public String registraMesa(@PathVariable("idMesa")Long idMesa, HttpServletRequest request, Model model){
+    public String acessaMesa(@PathVariable("idMesa")Long idMesa, HttpServletRequest request, Model model){
         Jogador jogador = jogadorServicoCrud.getJogadorById((Long)request.getSession().getAttribute("usuarioLogado"));
         if(mesaServicoCrud.validaMesaJogador(idMesa, jogador.getIdJogador())) {
             MesaDTO mesaDTO = mesaServicoCrud.getMesaDTO(idMesa);

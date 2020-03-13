@@ -6,6 +6,14 @@ public class JogadorDTO extends Jogador{
 
     private String fotoDePerfil;
 
+    public JogadorDTO(Jogador jogador){
+        super.setEmail(jogador.getEmail());
+        super.setNome(jogador.getNome());
+        super.setSenha(jogador.getSenha());
+        super.setIdJogador(jogador.getIdJogador());
+        super.setFotoJogador(jogador.getFotoJogador());
+    }
+
     public String getFotoDePerfil() {
         return fotoDePerfil;
     }
